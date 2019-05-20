@@ -1,0 +1,323 @@
+
+.carousel-item {
+    transition: -webkit-transform 0.8s ease;
+    transition: transform 0.5s ease;
+    transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+    -webkit-backface-visibility: visible;
+    backface-visibility: visible;
+  }
+  .carousel-inner img{
+    width: 100%;
+    height: 100%;
+    opacity:0.7;
+  }
+  .navbar-laravel{
+      background: none;
+      z-index: 2;
+      position: relative;
+      width: 100%;
+      box-shadow: none;
+      margin-top: -30px;
+  }
+  .dropdown-toggle:after{
+    display: none;
+  }
+  .carousel-inner{
+    position: relative;
+  }
+  .carousel-caption{
+      position: absolute;
+      top: 260px;
+  }
+  .main{
+      position: absolute;
+      top: 0;
+  }
+  .carousel-caption h1{
+    color: black;
+  }
+  .carousel-caption h2{
+      font-size: 100px;
+      margin: 40px 0;
+  }
+  .carousel-caption i{
+    font-size: 30px
+  }
+  .carousel-caption button{
+      padding-bottom: 0;
+      font-size: 20px;
+  }
+
+  /* メイン */
+  .icon-image{
+      border-radius: 50%;
+      margin: 10px;
+      
+  }
+  .study-image{
+    width: 100%;
+    height: auto;
+}
+.post{
+    margin: 40px;
+    padding: 0;
+    position: relative;
+    z-index: 1; 
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 6px 6px 0px !important;
+}
+.post-img-top{
+    position: relative;
+}
+.post-tag{
+    position: absolute;
+    bottom: 8px;
+}
+.detail h3{
+    display: inline-block;
+    margin-bottom: 0;
+}
+.post span{
+    display: inline-block;
+    text-align: center;
+    border: 1px solid #9c989857;
+    border-radius: 10px;
+}
+.area{
+    background: #a9dac9b6;
+}
+.price{
+    background: #eec491c4;
+}
+.study{
+    background: #c1df94c0;
+}
+.detail h2{
+    text-align: center;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    margin: 5px 5px 20px;
+    font-size: 23px;
+    font-weight: 600;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+.posts h1{
+  margin: 30px 0 0 44px;
+  font-size: 25px;  
+}
+.post a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-indent:-999px;
+    z-index: 2; /* 必要であればリンク要素の重なりのベース順序指定 */
+}
+.post a:hover{
+    background: #4e4d4d80;
+}
+.select{
+    text-align: center;
+}
+.form-inline{
+    display: block;
+}
+
+select{
+    background: white;
+}
+/* ログイン、登録フェードイン */
+.touroku{
+  display: none;
+  position: absolute;
+  top: -1000px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 4;
+  width: 60%;
+  height: 80px;
+  margin: auto;
+  border-radius: 5px;
+}
+.roguin{
+    display: none;
+    position: absolute;
+    top: -1000px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 4;
+    width: 60%;
+    height: 80px;
+    margin: auto;
+    border-radius: 5px;  
+}
+.overray{
+    display: none;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+}
+.close{
+    font-size: 30px;
+}
+
+/* ホスト画面 */
+.host-main img{
+    width: 100%;
+    height: auto;
+    opacity: 0.8;
+}
+.host{
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.host-main-title{
+    position: absolute;
+    top: 300px;
+    left:20% ;
+    text-align: center;
+    margin: 0 auto;
+}
+.host-main-title h2{
+    font-size: 60px;
+    color: white;
+}
+.host-main-title h3{
+    margin: 30px auto 0;
+    border: 1px solid #fff;
+    background: white;
+    width: 50%;
+    border-radius: 5px;
+    padding: 5px 0;
+}
+.triangle{
+    border-top: 20px solid white;
+    border-right: 20px solid transparent;
+    border-left: 20px solid transparent;
+    width: 30px;
+    margin: 0 auto;
+  }
+  .create{
+      display: flex;
+  }
+  .form{
+      width: 80%;
+      margin: 30px auto;
+      border: 1px solid #ddd;
+  }
+  .form h2{
+      background: white;
+      padding: 10px 0 10px 20px;
+      font-size: 19px;
+  }
+  .form form{
+      padding: 20px;
+  }
+  .sidebar{
+      width: 40%;
+      margin: 30px auto;
+      text-align: center;
+  }
+  .sidebar ul{
+      list-style: none;
+      padding-left: 0;
+  }
+  .sidebar li{
+      margin-bottom: 10px;
+  }
+  .inline{
+      display: inline-block;
+  }
+  .look-avatar img{
+      border-radius: 50%;
+      margin-right: 10px;
+      float: left;
+  }
+  .nav-look-avatar img{
+      border-radius: 50%;
+  }
+  /* single */
+  .single img{
+      width: 100%;
+      height: auto;
+  }
+  .single-detail img{
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+  }
+  .single-detail{
+      padding: 50px;
+  }
+  .single-study-detail h3{
+      border-bottom: 1px solid #aaa7a794;
+      margin: 0 300px 10px;
+      padding-bottom: 20px;
+  }
+  .study-detail{
+      display: flex;
+      margin: 20px 300px;
+      position: relative;
+      border-bottom: 1px solid #aaa7a794;
+  }
+  .study-detail p{
+      position: absolute;
+      left: 300px;
+  }
+ 
+
+  /* 吹き出し */
+  .balloon2-left {
+    position: relative;
+    display: inline-block;
+    margin: 1.5em 0 1.5em 15px;
+    padding: 10px 10px;
+    min-width: 120px;
+    max-width: 100%;
+    color: #555;
+    font-size: 16px;
+    background: #FFF;
+    border: solid 3px #555;
+    box-sizing: border-box;
+    border-radius: 10px;
+  }
+  
+  .balloon2-left:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -24px;
+    margin-top: -12px;
+    border: 12px solid transparent;
+    border-right: 12px solid #FFF;
+    z-index: 2;
+  }
+  
+  .balloon2-left:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -30px;
+    margin-top: -14px;
+    border: 14px solid transparent;
+    border-right: 14px solid #555;
+    z-index: 1;
+  }
+  
+  .balloon2-left p {
+    margin: 0;
+    padding: 0;
+  }
+  .send-mail{
+      width: 200px;
+      margin: 20px auto;
+  }
