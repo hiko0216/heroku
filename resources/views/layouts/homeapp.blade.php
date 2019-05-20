@@ -54,6 +54,7 @@
                 <a class="navbar-brand" href="{{ route('top') }}">
                 <img src="{{asset('img/252efd0d-9165-4794-aedb-262ab092e3ce.png')}}" width="140px" height="140px" alt="">
                 </a>
+           
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -66,18 +67,22 @@
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            </a>
+                            <a href="{{url('/detail')}}" class="nav-link">HOME ABROADとは</a>
+                        </li>
                         <!-- Authentication Links -->
                         @guest
                         @if (Route::has('register'))
                         <li class="nav-item">
-                            <a href="/register" class="nav-link nav-host" >ホストになる</a>
+                            <a class="nav-link nav-host" >ホストになる</a>
                         </li>
                         <li class="nav-item">
-                             <a href="/register" class="nav-link nav-host" >新規登録</a>
+                             <a class="nav-link nav-host" >新規登録</a>
                         </li>
                          @endif
                             <li class="nav-item">
-                                <a href="/login" class="nav-link nav-login">ログイン</a>
+                                <a class="nav-link nav-login">ログイン</a>
                             </li>
                         @else
                             <li class="nav-item dropdown">

@@ -169,12 +169,9 @@
 			<div class="carousel-caption">
                 <h1>グローバル時代の新しい留学</h1>
                 <h2>HOME ABROAD</h2>
-        <a href="#project">
-				<button type="button" class="btn btn-outline-light btn-lg">さっそく留学先を探す</button>
-        </a>
-    <a href="{{url('/detail')}}">
-				<button type="button" class="btn btn-outline-danger btn-lg">HOME ABROADとは</button>
-        </a>
+        <a href="#contact">
+				<button type="button" class="btn btn-outline-light btn-lg">さっそく留学先を探す <br> <i class="fas fa-chevron-down"></i></button>
+      </a>
 			</div>
 		</div>
 		<div class="carousel-item ">
@@ -186,54 +183,14 @@
 
 <div class="posts">
     <div class="container">
-        
-            <div class="select mt-5">
-                <small>絞込み検索</small>
-            <form class="form-inline myform mt-2" action="/search" method="GET" role="search">
-                {{ csrf_field() }}
-                
-                <label data-toggle="tooltip" data-placement="top" title="select price" class="sr-only mr-sm-2"
-                       for="inlineFormCustomSelect">Price</label>
-                <select name="price" data-toggle="tooltip" data-placement="top" title="select price"
-                        class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect">
-                        <option value="">Select Price</option>
-                    @foreach ($prices as $price)
-                        <option value="{{ $price->id }}">{{ $price->price }}</option>
-                    @endforeach
-                </select>
-                
-            
-                <label data-toggle="tooltip" data-placement="top" title="select area" class="sr-only mr-sm-2"
-                       for="inlineFormCustomSelect">Area</label>
-                <select name="area" data-toggle="tooltip" data-placement="top" title="select area"
-                        class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect">
-                        <option value="">Select Area</option>
-                    @foreach ($areas as $area)
-                        <option value="{{ $area->id }}">{{ $area->area }}</option>
-                    @endforeach
-                </select>
-            
-                <label data-toggle="tooltip" data-placement="top" title="select Study" class="sr-only mr-sm-2"
-                       for="inlineFormCustomSelect">Study</label>
-                <select name="study" data-toggle="tooltip" data-placement="top" title="select study"
-                        class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect">
-                        <option value="">Select Study</option>
-                    @foreach ($studies as $study)
-                        <option value="{{ $study->id }}">{{ $study->study }}</option>
-                    @endforeach
-                </select>
-            
-                <button type="submit" class="btn btn-primary btn-md">Submit</button>
-            </form>
-        </div>
-        <h1>ホームステイ留学先一覧</h1>
+        <h1>絞込み結果</h1>
         <div class="row justify-content-center">
             @if ($posts->count()>0)
                 
             
             @foreach ($posts as $post)
            
-            <div class="col-sm-3 card post" id="project">
+            <div class="col-sm-3 card post">
             <a href="{{route('single.show',['id'=>$post->id])}}"></a>
                     <div class="post-img-top">
                         <img src="{{$post->image}}" alt="" class="study-image">
