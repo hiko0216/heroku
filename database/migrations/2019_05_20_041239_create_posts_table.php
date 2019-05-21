@@ -17,10 +17,10 @@ class CreatePostsTable extends Migration
             $table->bigIncrements('id');
             $table->integer('user_id');
             $table->string('title');
-            $table->string('price_id');
+            $table->integer('price_id');
             $table->string('price');
-            $table->string('area_id');
-            $table->string('study_id');
+            $table->integer('area_id');
+            $table->integer('study_id');
             $table->string('message');
             $table->string('image');
             $table->timestamps();
