@@ -68,7 +68,7 @@
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                         @guest
-                        @if (Route::has('register')|| !Route::has('facebook'))
+                        @if (Route::has('register') || !Route::has('facebook') && !Route::has('facebookcallback'))
                         <li class="nav-item">
                             <a href="/register" class="nav-link nav-host" >ホストになる</a>
                         </li>
