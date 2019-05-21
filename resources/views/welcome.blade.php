@@ -236,7 +236,7 @@
             <div class="col-sm-3 card post" id="project">
             <a href="{{route('single.show',['id'=>$post->id])}}"></a>
                     <div class="post-img-top">
-                        <img src="{{$post->image}}" alt="" class="study-image">
+                        <img src="{{asset($post->image)}}" alt="" class="study-image">
                         <div class="post-tag pl-2">
                                 <span class="area">{{$post->area->area}}</span>
                                 <span class="price">＄{{$post->price}}</span>
