@@ -74,9 +74,9 @@
                                                 </div>
                                             </div>
                                         </form>
-                                        {{-- <div class="facebook text-right">
+                                        <div class="facebook text-right">
                                             <a href="" class="btn btn-primary"><i class="fab fa-facebook-f pr-3"></i>Facebook sign in</a>
-                                        </div> --}}
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -147,9 +147,9 @@
                                                     </div>
                                                 </div>
                                             </form>
-                                            {{-- <div class="facebook text-right text-center mt-2">
+                                            <div class="facebook text-right text-center mt-2">
                                             <a href="{{url('/redirect')}}" class="btn btn-primary"><i class="fab fa-facebook-f pr-3"></i>Facebook Log in</a>
-                                            </div> --}}
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
