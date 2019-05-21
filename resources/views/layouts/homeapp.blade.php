@@ -73,7 +73,7 @@
                         </li>
                         <!-- Authentication Links -->
                         @guest
-                        @if (Route::has('register') || !(Route::has('facebook') && Route::has('facebookcallback')))
+                        @if (Route::has('register'))
                         <li class="nav-item">
                             <a class="nav-link nav-host" >ホストになる</a>
                         </li>
