@@ -20,7 +20,7 @@ Route::get('/profile',[
     'as'=>'post.create'
 ]);
 Route::get('/redirect','SocialFacebookController@redirect');
-Route::get('/auth/facebook/callback','SocialFacebookController@callback');
+Route::get('/auth/facebook/callback','SocialFacebookController@callback')->name('facebook');
 
 Auth::routes();
 
