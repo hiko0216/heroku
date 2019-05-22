@@ -153,7 +153,7 @@ return [
     |
     */
 
-    'domain' => env('SESSION_DOMAIN','https://glacial-fortress-30715.herokuapp.com/'),
+    'domain' => env('SESSION_DOMAIN',''),
 
     /*
     |--------------------------------------------------------------------------
