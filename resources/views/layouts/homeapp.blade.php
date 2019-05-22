@@ -73,14 +73,14 @@
                         </li>
                         <!-- Authentication Links -->
                         @guest
-                        @if (Route::has('register') || Route::has('facebook'))
+                        @if (Route::has('register'))
                         <li class="nav-item">
                             <a class="nav-link nav-host" >ホストになる</a>
                         </li>
                         <li class="nav-item">
                              <a class="nav-link nav-host" >新規登録</a>
                         </li>
-                        
+                        @endif
                             <li class="nav-item">
                                 <a class="nav-link nav-login">ログイン</a>
                             </li>
@@ -109,7 +109,7 @@
                                     </form>
                                 </div>
                             </li>
-                            @endif
+                           
                         @endguest
                     </ul>
                 </div>

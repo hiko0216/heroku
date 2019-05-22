@@ -75,7 +75,7 @@
                         <li class="nav-item">
                              <a href="/register" class="nav-link nav-host" >新規登録</a>
                         </li>
-                        
+                        @endif
                             <li class="nav-item">
                                 <a href="/login" class="nav-link nav-login">ログイン</a>
                             </li>
@@ -104,7 +104,7 @@
                                     </form>
                                 </div>
                             </li>
-                            @endif
+                            
                         @endguest
                     </ul>
                 </div>
