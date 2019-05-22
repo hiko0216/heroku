@@ -84,7 +84,7 @@
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                 {{ Auth::user()->name }} <span class="caret nav-look-avatar">
                                     
-                                <span><img src="{{asset(Auth::user()->avatar)}}" alt="" width="40px" height="40px"></span>
+                                <span><img src="{{asset(Auth::user()->avatar)}}" alt="avatar" width="40px" height="40px"></span>
                                     
                                 </span>
                                 </a>
