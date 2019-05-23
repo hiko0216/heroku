@@ -10,7 +10,6 @@ use App\User;
 use App\Area;
 use App\Study;
 use App\Price;
-use Storage;
 
 class PostsController extends Controller
 {
@@ -60,10 +59,7 @@ class PostsController extends Controller
 
         $image_new_name = time().$image->getClientOriginalName();
 
-        $pathToFile = Storage::disk('public')->put('uploads/', $image_new_name);
-
-            dd($pathToFile);
-        // $image->move('uploads/posts',$image_new_name);
+        $image->move('uploads/posts',$image_new_name);
 
         $user_id = Auth::id();
 
@@ -75,7 +71,7 @@ class PostsController extends Controller
             'study_id'=>$request->study_id,
             'message'=>$request->message,
             'user_id'=>$user_id,
-            'image'=> $pathToFile
+            'image'=> 'uploads/posts/'.$image_new_name
         ]);
 
         Session::flash('success','Post created successfully');
