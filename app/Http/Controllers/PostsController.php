@@ -10,6 +10,7 @@ use App\User;
 use App\Area;
 use App\Study;
 use App\Price;
+use Storage;
 
 class PostsController extends Controller
 {
