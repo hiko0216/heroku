@@ -62,7 +62,7 @@ class PostsController extends Controller
 
         $pathToFile = Storage::disk('public')->put('uploads/', $image_new_name);
 
-
+            dd($pathToFile);
         // $image->move('uploads/posts',$image_new_name);
 
         $user_id = Auth::id();
