@@ -73,10 +73,10 @@ Route::get('/friends',[
     'as'=>'friend.index'
 ]);
 //個別のチャットルームに飛ぶ（idを渡す）
-Route::get('/chat',[
-    'uses'=>'ChatController@chat',
-    'as'=>'chat.chat'
-]);
+// Route::get('/chat',[
+//     'uses'=>'ChatController@chat',
+//     'as'=>'chat.chat'
+// ]);
 
 Route::get('/chat/{id}',[
     'uses'=>'ChatController@show',
