@@ -78,7 +78,10 @@ Route::get('/chat',[
     'as'=>'chat.chat'
 ]);
 
-Route::get('/chat/{id}','ChatController@show')->name('chat.show');
+Route::get('/chat/{id}',[
+    'uses'=>'ChatController@show',
+    'as'=>'chat.show'
+]);
 
 //getchat
 Route::post('/chat/getChat/{id}','ChatController@getChat');
