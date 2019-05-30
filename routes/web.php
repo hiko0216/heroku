@@ -66,23 +66,20 @@ Route::post('/friend/add/{friend}',[
     'as'=>'friend.add'
 ]);
 
+
 //chat.indexに飛ぶroute（友達一覧を持ってくる必要あり）
 Route::get('/friends',[
     'uses'=>'FriendController@index',
     'as'=>'friend.index'
 ]);
-
-Route::get('/chat',[
-    'uses'=>'ChatController@chat',
-    'as'=>'chat.chat'
-]);
-
+//個別のチャットルームに飛ぶ（idを渡す）
 Route::get('/chat',[
     'uses'=>'ChatController@chat',
     'as'=>'chat.chat'
 ]);
 
 Route::get('/chat/{id}','ChatController@show')->name('chat.show');
+
 //getchat
 Route::post('/chat/getChat/{id}','ChatController@getChat');
 Route::post('/chat/sendChat','ChatController@sendChat');
