@@ -86,3 +86,8 @@ Route::get('/chat/{id}',[
 //getchat
 Route::post('/chat/getChat/{id}','ChatController@getChat');
 Route::post('/chat/sendChat','ChatController@sendChat');
+
+Route::get('show/friend/posts/{id}',[
+    'uses'=>'FriendController@show',
+    'as'=>'show.friend.post'
+]);

@@ -17,7 +17,7 @@
                     </a>
                     <div class="chat-botton mt-1">
                 <a href="{{route('chat.see',$friend->id)}}" class="btn btn-primary btn-sm">チャット</a>
-                {{-- <a href="{{route('show.friend.post',['id'=>$friend->id])}}" class="btn btn-danger btn-sm">留学詳細</a> --}}
+                <a href="{{route('show.friend.post',['id'=>$friend->id])}}" class="btn btn-danger btn-sm">留学詳細</a>
                     </div>
                 </li>
                 @empty
