@@ -1,8 +1,12 @@
 
 /* ヘッダー */
+.wrapper{
+  width:100%;
+  overflow:hidden;
+}
 header{
     background: rgba(240, 162, 71);
-    position: fixed;
+    position: fixed; 
     width: 100%;
     top:0;
     left: 0;
@@ -395,4 +399,6 @@ header{
     border-radius: 5px;
     padding: 15px 0;
   }
-  
+  @media screen and (max-width: 480px) {
+    
+  }

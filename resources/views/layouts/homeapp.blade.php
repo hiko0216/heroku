@@ -67,7 +67,7 @@
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
+                        <li class="nav-item pt-2">
                             </a>
                             <a href="{{url('/detail')}}" class="nav-link">HOME ABROADとは</a>
                         </li>
