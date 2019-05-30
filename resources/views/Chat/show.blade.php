@@ -13,7 +13,7 @@
                         <a href="{{url('/friends')}}" class="btn btn-outline-danger btn-sm backbtn ml-3">戻る</a>
                         
                         
-                    <chat v-bind:chats="chats" v-bind:userid="{{Auth::user()->id}}" v-bind:friendid="{{$friend->id}}"></chat>
+                    {{-- <chat v-bind:chats="chats" v-bind:userid="{{Auth::user()->id}}" v-bind:friendid="{{$friend->id}}"></chat> --}}
                         
                     </div>
                 </div>
