@@ -8,6 +8,7 @@ use App\User;
 use App\Area;
 use App\Study;
 use App\Price;
+use Auth;
 
 class HomeController extends Controller
 {
@@ -40,7 +41,7 @@ class HomeController extends Controller
         return view('welcome')->with('posts',$posts)->with('users',$users)->with('areas',$areas)->with('studies',$studies)->with('prices',$prices);
     }
     public function single(Post $post){
-        return view('single')->with('post',$post);
+        return view('single')->with('post',$post)->with('user',Auth::user());
     }
 
     public function search()
