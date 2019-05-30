@@ -91,3 +91,24 @@ Route::get('show/friend/posts/{id}',[
     'uses'=>'FriendController@show',
     'as'=>'show.friend.post'
 ]);
+
+Route::get('user/pay/{id}',[
+    'uses'=>'CheckoutController@page',
+    'as'=>'user.pay'
+]);
+Route::post('/cart/checkout/{price}',[
+    'uses'=>'CheckoutController@pay',
+    'as'=>'cart.checkout'
+]);
+Route::get('/cart/checkout/{price}',[
+    'uses'=>'CheckoutController@index',
+    'as'=>'cart.checkout'
+]);
+Route::post('select/week/{id}',[
+    'uses'=>'CheckoutController@select',
+    'as'=>'select.week'
+]);
+Route::get('select/week/{id}',[
+    'uses'=>'CheckoutController@show',
+    'as'=>'select.week'
+]);
