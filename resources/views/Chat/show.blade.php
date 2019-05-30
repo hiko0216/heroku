@@ -50,9 +50,9 @@
                                 <p>{{$post->message}}</p>
                         </div>
                     </div>
-                        <div class="mt-2">
+                        {{-- <div class="mt-2">
                         <a href="{{route('user.pay',$friend->id)}}" class="btn btn-danger" style="width:100%;">このホームステイ先に申し込む</a>
-                        </div>
+                        </div> --}}
   
                 @endforeach 
             </div>
