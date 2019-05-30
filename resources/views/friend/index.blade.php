@@ -11,12 +11,12 @@
                 @forelse ($friends as $friend)
                 <li class="list-item mb-3">
                 
-                 <a href="{{route('chat.show',$friend->id)}}"class="panel-block">
+                 <a href="{{route('chat.see',$friend->id)}}"class="panel-block">
                     <img src="{{$friend->avatar}}" alt="" width="50px" height="50px" style="border-radius:50%;">
                     {{$friend->name}}
                     </a>
                     <div class="chat-botton mt-1">
-                <a href="{{route('chat.show',$friend->id)}}" class="btn btn-primary btn-sm">チャット</a>
+                <a href="{{route('chat.see',$friend->id)}}" class="btn btn-primary btn-sm">チャット</a>
                 {{-- <a href="{{route('show.friend.post',['id'=>$friend->id])}}" class="btn btn-danger btn-sm">留学詳細</a> --}}
                     </div>
                 </li>

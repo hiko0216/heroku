@@ -79,8 +79,8 @@ Route::get('/friends',[
 // ]);
 
 Route::get('/chat/{id}',[
-    'uses'=>'ChatController@show',
-    'as'=>'chat.show'
+    'uses'=>'ChatController@see',
+    'as'=>'chat.see'
 ]);
 
 //getchat
