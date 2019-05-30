@@ -15,7 +15,9 @@ class ChatController extends Controller
     //個別のチャットルームへ飛ぶ
     public function show($id)
     {
-        return view('chat.show');
+        $friend = User::find($id);
+        $posts = User::find($id)->posts;
+        return view('chat.show')->withFriend($friend)->with('posts',$posts);
     }
     //friend　tableに追加して個別チャットルームへ
     public function getChat($id){
