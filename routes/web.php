@@ -59,3 +59,30 @@ Route::any('/search', 'HomeController@search');
 Route::get('/detail',function(){
     return view('detail');
 });
+
+//chatボタンを押したらfriendテーブルに追加する→個別のチャットルームに移動Route
+Route::post('/friend/add/{friend}',[
+    'uses'=>'FriendController@store',
+    'as'=>'friend.add'
+]);
+
+//chat.indexに飛ぶroute（友達一覧を持ってくる必要あり）
+Route::get('/friends',[
+    'uses'=>'FriendController@index',
+    'as'=>'friend.index'
+]);
+
+Route::get('/chat',[
+    'uses'=>'ChatController@chat',
+    'as'=>'chat.chat'
+]);
+
+Route::get('/chat',[
+    'uses'=>'ChatController@chat',
+    'as'=>'chat.chat'
+]);
+
+Route::get('/chat/{id}','ChatController@show')->name('chat.show');
+//getchat
+Route::post('/chat/getChat/{id}','ChatController@getChat');
+Route::post('/chat/sendChat','ChatController@sendChat');

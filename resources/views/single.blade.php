@@ -31,10 +31,17 @@
             </div>
             @guest
                 @if (Route::has('register'))
-        <a href="{{route('login')}}" class="btn btn-primary btn-sm mb-5 nav-login2">ログインしてチャットする</a>
+        <a href="{{route('login')}}" class="btn btn-primary mb-5 nav-login2">ログインしてチャットする</a>
                 @endif
                 @else
-                    <a href="" class="btn btn-danger btn-sm mb-5">チャットする</a>
+                <form action="{{route('friend.add',['id'=>$user->id])}}"  method="post"class="form-controll">
+                    @csrf
+                <input type="hidden" value="{{$post->user_id}}" name="friend_id">
+                    <button type="submit" class="btn btn-danger" style="width:100%;">
+                        マッチしてチャットする
+                    </button>
+                </form>
+        
             @endguest
         </div>
     </div>
