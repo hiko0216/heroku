@@ -76,6 +76,9 @@
     display: inline-block;
     margin-bottom: 0;
 }
+.detail p{
+    padding: 0 5px;
+}
 .post span{
     display: inline-block;
     text-align: center;
@@ -135,7 +138,7 @@ select{
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 4;
+  z-index: 100;
   width: 60%;
   height: 80px;
   margin: auto;
@@ -148,7 +151,7 @@ select{
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: 4;
+    z-index: 100;
     width: 60%;
     height: 80px;
     margin: auto;
@@ -256,7 +259,10 @@ select{
       border-radius: 50%;
   }
   .single-detail{
-      padding: 50px;
+      padding: 50px 50px 20px;
+  }
+  .single-study-detail{
+      padding-bottom: 30px;
   }
   .single-study-detail h3{
       border-bottom: 1px solid #aaa7a794;
@@ -282,7 +288,7 @@ select{
     margin: 1.5em 0 1.5em 15px;
     padding: 10px 10px;
     min-width: 120px;
-    max-width: 100%;
+    max-width: 80%;
     color: #555;
     font-size: 16px;
     background: #FFF;
@@ -321,3 +327,94 @@ select{
       width: 200px;
       margin: 20px auto;
   }
+  @media screen and (max-width: 480px) {
+    .navbar img{
+        width: 60px;
+        height: auto;
+    }
+    .navbar{
+        margin-top: 0px;
+    }
+    .navbar-toggler{
+        padding: 5px 10px;
+    }
+    .navbar-toggler-icon{
+        width: 1em;
+        height: 1em;
+    }
+    #navbarSupportedContent{
+        background: hsla(0, 0%, 26%, 0.603);
+        
+    }
+    #navbarSupportedContent a{
+        color:white;
+    }
+    .carousel-caption{
+       top:60px;
+    }
+    .carousel-caption h1{
+        font-size: 10px;
+    }
+    .carousel-caption h2{
+        font-size: 30px;
+        margin: 10px 0;
+    }
+    .carousel-caption button{
+        font-size: 2px;
+        margin-top: 5px;
+        
+    }
+    .carousel-caption .btn-outline-light{
+       display: none;
+    }
+    .carousel-indicators{
+        display: none;
+    }
+    .select{
+        margin-top: 10px !important;
+    }
+    .myform button{
+        width: 100%;
+        padding: 2px 0;
+    }
+    .post{
+        margin: 10px 30px;
+    }
+    .single-detail{
+        position: relative;
+        padding: 20px;
+    }
+    .single-detail h3{
+        position: absolute;
+        top:46px;
+        right: 40px;
+        font-size: 20px;
+    }
+    .balloon2-left::after{
+       content: none;
+    }
+    .balloon2-left::before{
+        content: none;
+     }
+     .single-study-detail h3{
+        border-bottom: 1px solid #aaa7a794;
+        margin: 0;
+        padding-bottom: 20px;
+    }
+    .study-detail{
+        display: flex;
+        margin: 10px;
+        padding-left: 30px;
+        position: relative;
+        border-bottom: 1px solid #aaa7a794;
+    }
+    .study-detail p{
+        position: absolute;
+        text-align: center;
+        left: 60%;
+    }
+    .btn:not(:disabled):not(.disabled){
+        margin: 3px 10px;
+    }
+     
+   }
