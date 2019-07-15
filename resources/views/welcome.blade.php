@@ -168,7 +168,7 @@
             
 			<div class="carousel-caption">
                 <h1>グローバル時代の新しい留学</h1>
-                <h2>HOME ABROAD</h2>
+                <h2>HOME ABROADD</h2>
         <a href="#project">
 				<button type="button" class="btn btn-outline-light btn-lg">さっそく留学先を探す</button>
         </a>
