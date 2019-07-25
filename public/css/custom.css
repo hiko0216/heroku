@@ -8,8 +8,8 @@
   }
   .carousel-inner img{
     width: 100%;
-    height: 797px;
-    
+    height: 100%;
+    opacity:0.7;
   }
   .navbar-laravel{
       background: none;
@@ -34,7 +34,7 @@
       top: 0;
   }
   .carousel-caption h1{
-    color: white;
+    color: black;
   }
   .carousel-caption h2{
       font-size: 100px;
@@ -70,11 +70,7 @@
 }
 .post-tag{
     position: absolute;
-    top: 47px;
-    right: 10px;
-}
-.detail{
-    position: relative;
+    bottom: 8px;
 }
 .detail h3{
     display: inline-block;
@@ -86,8 +82,8 @@
 .post span{
     display: inline-block;
     text-align: center;
-    border-radius: 5px;
-    padding: 2px 6px;
+    border: 1px solid #9c989857;
+    border-radius: 10px;
 }
 .area{
     background: #a9dac9b6;
@@ -138,11 +134,11 @@ select{
 .touroku{
   display: none;
   position: absolute;
-  top: -1500px;
+  top: -1000px;
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 999;
+  z-index: 100;
   width: 60%;
   height: 80px;
   margin: auto;
@@ -151,20 +147,15 @@ select{
 .roguin{
     display: none;
     position: absolute;
-    top: -1500px;
+    top: -1000px;
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: 999;
+    z-index: 100;
     width: 60%;
     height: 80px;
     margin: auto;
     border-radius: 5px;  
-}
-.facebook a{ 
-    background: rgb(107, 119, 187) !important;
-    border:none;
-    width:300px;
 }
 .overray{
     display: none;
@@ -336,34 +327,10 @@ select{
       width: 200px;
       margin: 20px auto;
   }
-  @media screen and (max-width: 750px) {
-     .welcomepost{
-         padding: 0 20px;
-     } 
-     .welcomepost>div{
-         margin-top: 20px;
-     }
-    textarea{
-        max-width: 100%;
-        border: 1px solid #ccc;
-    }
-    .roguin{
-        top: 0;
-        margin:30px 0 0 0;
-        width: 100%;
-    }
-    .touroku{
-        top: 0;
-        margin:30px 0 0 0;
-        width: 100%;
-    }
+  @media screen and (max-width: 480px) {
     .navbar img{
-        width: 70px;
+        width: 60px;
         height: auto;
-    }
-    .navbar-nav{
-        text-align: right;
-        padding-right: 10px;
     }
     .navbar{
         margin-top: 0px;
@@ -377,16 +344,10 @@ select{
     }
     #navbarSupportedContent{
         background: hsla(0, 0%, 26%, 0.603);
-        z-index: 999;
         
     }
     #navbarSupportedContent a{
         color:white;
-    }
-    .dropdown-menu{
-        background: none;
-        text-align: right;
-        border: none;
     }
     .carousel-caption{
        top:60px;
@@ -397,9 +358,6 @@ select{
     .carousel-caption h2{
         font-size: 30px;
         margin: 10px 0;
-    }
-    .carousel-inner img{
-        height: 200px;
     }
     .carousel-caption button{
         font-size: 2px;
@@ -420,7 +378,7 @@ select{
         padding: 2px 0;
     }
     .post{
-        margin:10px 0 !important;
+        margin: 10px 30px;
     }
     .single-detail{
         position: relative;
@@ -429,7 +387,7 @@ select{
     .single-detail h3{
         position: absolute;
         top:46px;
-        right: 100px;
+        right: 40px;
         font-size: 20px;
     }
     .balloon2-left::after{
@@ -456,27 +414,7 @@ select{
         left: 60%;
     }
     .btn:not(:disabled):not(.disabled){
-        margin: 0;
+        margin: 3px 10px;
     }
-    .balloon2-left{
-        max-width: 100%;
-    }
-    .form{
-        width: 100%;
-        margin: 20px auto;
-        border: 1px solid #ddd;
-    }
-    .create{
-        display: block;
-    }
-    .sidebar{
-        width:100%;
-        margin:0;
-
-    }
-    .sidebar li{
-        display: inline-block;
-        font-size: 11px;
-        margin: 0 8px;
-    }
+     
    }

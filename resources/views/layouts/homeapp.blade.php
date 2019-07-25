@@ -3,7 +3,6 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="userId" content="{{Auth::check() ? Auth::user()->id : 'null'}}">
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -55,6 +54,7 @@
                 <a class="navbar-brand" href="{{ route('top') }}">
                 <img src="{{asset('img/252efd0d-9165-4794-aedb-262ab092e3ce.png')}}" width="140px" height="140px" alt="">
                 </a>
+           
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -67,25 +67,29 @@
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
+                        <li class="nav-item pt-2">
+                            </a>
+                            <a href="{{url('/detail')}}" class="nav-link">HOME ABROADとは</a>
+                        </li>
                         <!-- Authentication Links -->
                         @guest
                         @if (Route::has('register'))
                         <li class="nav-item">
-                            <a href="/register" class="nav-link nav-host" >ホストになる</a>
+                            <a class="nav-link nav-host" >ホストになる</a>
                         </li>
                         <li class="nav-item">
-                             <a href="/register" class="nav-link nav-host" >新規登録</a>
+                             <a class="nav-link nav-host" >新規登録</a>
                         </li>
-                         @endif
+                        @endif
                             <li class="nav-item">
-                                <a href="/login" class="nav-link nav-login">ログイン</a>
+                                <a class="nav-link nav-login">ログイン</a>
                             </li>
                         @else
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                 {{ Auth::user()->name }} <span class="caret nav-look-avatar">
                                     
-                                <span><img src="{{asset(Auth::user()->avatar)}}" alt="" width="40px" height="40px"></span>
+                                <span><img src="{{asset(Auth::user()->avatar)}}" alt="avatar" width="40px" height="40px"></span>
                                     
                                 </span>
                                 </a>
@@ -105,6 +109,7 @@
                                     </form>
                                 </div>
                             </li>
+                           
                         @endguest
                     </ul>
                 </div>
@@ -126,8 +131,6 @@
                     {{Session::get('success')}}
                 </div>
             @endif
-            <main class="py-4">
-                @yield('content')
-            </main>
+    @yield('content')
 </body>
 </html>
