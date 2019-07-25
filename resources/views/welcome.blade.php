@@ -157,31 +157,43 @@
                         </div>   
 
 
- <div id="slides" class="carousel slide top" data-ride="carousel">
-	<ul class="carousel-indicators">
-		<li data-target="#slides" data-slide-to="0" class="active"></li>
-		<li data-target="#slides" data-slide-to="1" ></li>
-	</ul>
-	<div class="carousel-inner">
-		<div class="carousel-item active">
-        <img src="{{asset('img/20600.jpg')}}"  alt="">
-            
-			<div class="carousel-caption">
-                <h1>グローバル時代の新しい留学</h1>
-                <h2>HOME ABROAD</h2>
-        <a href="#project">
-				<button type="button" class="btn btn-outline-light btn-lg">さっそく留学先を探す</button>
-        </a>
-    <a href="{{url('/detail')}}">
-				<button type="button" class="btn btn-outline-danger btn-lg">HOME ABROADとは</button>
-        </a>
-			</div>
-		</div>
-		<div class="carousel-item ">
-        <img src="{{asset('img/20956.jpg')}}" alt="">
-		</div>
-	</div>
-</div>
+                        <div id="slides" class="carousel slide top" data-ride="carousel">
+                            <ul class="carousel-indicators">
+                                <li data-target="#slides" data-slide-to="0" class="active"></li>
+                                <li data-target="#slides" data-slide-to="1" ></li>
+                                <li data-target="#slides" data-slide-to="2" ></li>
+                                <li data-target="#slides" data-slide-to="3" ></li>
+                                <li data-target="#slides" data-slide-to="4" ></li>
+                            </ul>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                <img src="{{asset('img/adult-apartment-carpet-1054974.jpg')}}"  alt="">
+                                    
+                                    <div class="carousel-caption">
+                                        <h1>グローバル時代の新しい留学</h1>
+                                        <h2>HOME ABROAD</h2>
+                                <a href="#project">
+                                        <button type="button" class="btn btn-outline-light btn-lg">さっそく留学先を探す</button>
+                                </a>
+                            <a href="https://hikopro.com/homeabroad/">
+                                        <button type="button" class="btn btn-outline-danger btn-lg">HOME ABROADとは</button>
+                                </a>
+                                    </div>
+                                </div>
+                                <div class="carousel-item ">
+                                <img src="{{asset('img/kitchen-1336160_1920.jpg')}}" alt="">
+                                </div>
+                                <div class="carousel-item ">
+                                        <img src="{{asset('img/living-room-581073_1920.jpg')}}" alt="">
+                                </div>
+                                <div class="carousel-item ">
+                                        <img src="{{asset('img/neonbrand-381344-unsplash.jpg')}}" alt="">
+                                </div>
+                                <div class="carousel-item ">
+                                        <img src="{{asset('img/ceiling-clean-contemporary-1457842.jpg')}}" alt="">
+                                </div>
+                            </div>
+                        </div>
 
 
 <div class="posts">
