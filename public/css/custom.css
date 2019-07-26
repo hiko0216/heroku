@@ -138,7 +138,7 @@ select{
 .touroku{
   display: none;
   position: absolute;
-  top: -1500px;
+  top: 400px;
   right: 0;
   bottom: 0;
   left: 0;
@@ -151,7 +151,7 @@ select{
 .roguin{
     display: none;
     position: absolute;
-    top: -1500px;
+    top: -400px;
     right: 0;
     bottom: 0;
     left: 0;
