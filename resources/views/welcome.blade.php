@@ -175,7 +175,7 @@
         <a href="#project">
 				<button type="button" class="btn btn-outline-light btn-lg">さっそく留学先を探す</button>
         </a>
-    <a href="">
+    <a href="https://hikopro.com/homeabroad/">
 				<button type="button" class="btn btn-outline-danger btn-lg">HOME ABROADとは</button>
         </a>
 			</div>
