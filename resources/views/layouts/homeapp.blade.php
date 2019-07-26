@@ -67,9 +67,9 @@
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item pt-2">
+                        <li class="nav-item">
                             </a>
-                            <a href="{{url('/detail')}}" class="nav-link">HOME ABROADとは</a>
+                            <a href="https://hikopro.com/homeabroad/" class="nav-link">HOME ABROADとは</a>
                         </li>
                         <!-- Authentication Links -->
                         @guest
@@ -80,7 +80,7 @@
                         <li class="nav-item">
                              <a class="nav-link nav-host" >新規登録</a>
                         </li>
-                        @endif
+                         @endif
                             <li class="nav-item">
                                 <a class="nav-link nav-login">ログイン</a>
                             </li>
@@ -89,7 +89,7 @@
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                 {{ Auth::user()->name }} <span class="caret nav-look-avatar">
                                     
-                                <span><img src="{{asset(Auth::user()->avatar)}}" alt="avatar" width="40px" height="40px"></span>
+                                <span><img src="{{asset(Auth::user()->avatar)}}" alt="" width="40px" height="40px"></span>
                                     
                                 </span>
                                 </a>
@@ -109,7 +109,6 @@
                                     </form>
                                 </div>
                             </li>
-                           
                         @endguest
                     </ul>
                 </div>
