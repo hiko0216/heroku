@@ -19,6 +19,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
 </head>
 <style>
     .navbar{
@@ -33,6 +34,9 @@
    }
     .dropdown-toggle:after{
     display: none;
+  }
+  .sendbtn{
+      width: auto!important;
   }
 </style>
 <body>
