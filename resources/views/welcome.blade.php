@@ -14,7 +14,7 @@
                     
                                     <div class="card-body">
                                         <form method="POST" action="{{ route('register') }}">
-                                            {{csrf_field()}}
+                                            @csrf
                     
                                             <div class="form-group row">
                                                 <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
@@ -74,8 +74,8 @@
                                                 </div>
                                             </div>
                                         </form>
-                                        <div class="facebook text-right">
-                                            <a href="" class="btn btn-primary"><i class="fab fa-facebook-f pr-3"></i>Facebook sign in</a>
+                                        <div class="facebook text-center mt-2">
+                                            <a href="" class="btn btn-primary facebook"><i class="fab fa-facebook-f pr-1"></i>Facebook sign in</a>
                                         </div>
                                     </div>
                                 </div>
@@ -91,7 +91,7 @@
                         
                                         <div class="card-body">
                                             <form method="POST" action="{{ route('login') }}">
-                                                {{csrf_field()}}
+                                                @csrf
                         
                                                 <div class="form-group row">
                                                     <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
@@ -148,7 +148,7 @@
                                                 </div>
                                             </form>
                                             <div class="facebook text-right text-center mt-2">
-                                            <a href="{{url('/redirect')}}" class="btn btn-primary"><i class="fab fa-facebook-f pr-3"></i>Facebook Log in</a>
+                                            <a href="{{url('/redirect')}}" class="btn btn-primary facebook"><i class="fab fa-facebook-f pr-1"></i>Facebook LogIn</a>
                                             </div>
                                         </div>
                                     </div>
@@ -160,11 +160,14 @@
  <div id="slides" class="carousel slide top" data-ride="carousel">
 	<ul class="carousel-indicators">
 		<li data-target="#slides" data-slide-to="0" class="active"></li>
-		<li data-target="#slides" data-slide-to="1" ></li>
+        <li data-target="#slides" data-slide-to="1" ></li>
+        <li data-target="#slides" data-slide-to="2" ></li>
+        <li data-target="#slides" data-slide-to="3" ></li>
+        <li data-target="#slides" data-slide-to="4" ></li>
 	</ul>
 	<div class="carousel-inner">
 		<div class="carousel-item active">
-        <img src="{{asset('img/20600.jpg')}}"  alt="">
+        <img src="{{asset('img/adult-apartment-carpet-1054974.jpg')}}"  alt="">
             
 			<div class="carousel-caption">
                 <h1>グローバル時代の新しい留学</h1>
@@ -172,14 +175,23 @@
         <a href="#project">
 				<button type="button" class="btn btn-outline-light btn-lg">さっそく留学先を探す</button>
         </a>
-    <a href="{{url('/detail')}}">
+    <a href="">
 				<button type="button" class="btn btn-outline-danger btn-lg">HOME ABROADとは</button>
         </a>
 			</div>
 		</div>
 		<div class="carousel-item ">
-        <img src="{{asset('img/20956.jpg')}}" alt="">
-		</div>
+        <img src="{{asset('img/kitchen-1336160_1920.jpg')}}" alt="">
+        </div>
+        <div class="carousel-item ">
+                <img src="{{asset('img/living-room-581073_1920.jpg')}}" alt="">
+        </div>
+        <div class="carousel-item ">
+                <img src="{{asset('img/neonbrand-381344-unsplash.jpg')}}" alt="">
+        </div>
+        <div class="carousel-item ">
+                <img src="{{asset('img/ceiling-clean-contemporary-1457842.jpg')}}" alt="">
+        </div>
 	</div>
 </div>
 
@@ -187,11 +199,33 @@
 <div class="posts">
     <div class="container">
         
+        {{-- <div class="select">
+        <select name="price" id="">
+            <option value="">並び替え</option>
+            <option value="">費用が安い順</option>
+        </select>
+        <select name="area" id="">
+                <option value="">エリア別</option>
+                @foreach ($areas as $area)
+                    <option value="">{{$area->area}}</option>
+                @endforeach
+            </select>
+            
+            <select name="study" id="">
+                    <option value="">学習を選択</option>
+                    @foreach ($studies as $study)
+                         <option value="">{{$study->study}}</option>
+                    @endforeach
+                </select>
+            </div> --}}
             <div class="select mt-5">
                 <small>絞込み検索</small>
             <form class="form-inline myform mt-2" action="/search" method="GET" role="search">
                 {{ csrf_field() }}
-                
+                {{-- <div class="input-group" data-toggle="tooltip" data-placement="top" title="Title">
+                    <span class="input-group-addon" id="basic-addon1"><i class="fa fa-pencil"></i></span>
+                    <input name="title" type="text" class="form-control" placeholder="Title" aria-describedby="basic-addon1">
+                </div> --}}
                 <label data-toggle="tooltip" data-placement="top" title="select price" class="sr-only mr-sm-2"
                        for="inlineFormCustomSelect">Price</label>
                 <select name="price" data-toggle="tooltip" data-placement="top" title="select price"
@@ -223,11 +257,11 @@
                     @endforeach
                 </select>
             
-                <button type="submit" class="btn btn-primary btn-md">Submit</button>
+                <button type="submit" class="btn btn-primary btn-md">Search</button>
             </form>
         </div>
         <h1>ホームステイ留学先一覧</h1>
-        <div class="row justify-content-center">
+        <div class="row justify-content-center welcomepost">
             @if ($posts->count()>0)
                 
             
@@ -236,17 +270,18 @@
             <div class="col-sm-3 card post" id="project">
             <a href="{{route('single.show',['id'=>$post->id])}}"></a>
                     <div class="post-img-top">
-                        <img src="{{asset($post->image)}}" alt="" class="study-image">
-                        <div class="post-tag pl-2">
-                                <span class="area">{{$post->area->area}}</span>
-                                <span class="price">＄{{$post->price}}</span>
-                                <span class="study">{{$post->study->study}}</span>
-                        </div>
+                        <img src="{{$post->image}}" alt="" class="study-image">
+                       
                     </div>
                         <div class="detail">
                           
                         <img src="{{$post->user->avatar}}" alt="" class="icon-image" width="50px" height="50px">
                             <h3>{{$post->user->name}}</h3>
+                            <div class="post-tag pl-2">
+                                <span class="area">{{$post->area->area}}</span>
+                                <span class="price">＄{{$post->price}}</span>
+                                <span class="study">{{$post->study->study}}</span>
+                        </div>
                           
                         <h2>{{$post->title}}</h2>
                         <p>{{$post->message}}</p>
