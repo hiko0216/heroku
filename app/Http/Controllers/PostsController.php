@@ -10,6 +10,7 @@ use App\User;
 use App\Area;
 use App\Study;
 use App\Price;
+use Storage;
 
 class PostsController extends Controller
 {
@@ -55,11 +56,16 @@ class PostsController extends Controller
             'image'=>'required|image'
         ]);
 
+        // $image = $request->image;
+
+        // $image_new_name = time().$image->getClientOriginalName();
+
+        // $image->move('uploads/posts',$image_new_name);
         $image = $request->image;
-
-        $image_new_name = time().$image->getClientOriginalName();
-
-        $image->move('uploads/posts',$image_new_name);
+        // バケットの`myprefix`フォルダへアップロード
+        $path = Storage::disk('s3')->putFile('myprefix', $image, 'public');
+        // アップロードした画像のフルパスを取得
+        $url = Storage::disk('s3')->url($path);
 
         $user_id = Auth::id();
 
@@ -71,7 +77,7 @@ class PostsController extends Controller
             'study_id'=>$request->study_id,
             'message'=>$request->message,
             'user_id'=>$user_id,
-            'image'=> 'uploads/posts/'.$image_new_name
+            'image'=> $url
         ]);
 
         Session::flash('success','Post created successfully');
