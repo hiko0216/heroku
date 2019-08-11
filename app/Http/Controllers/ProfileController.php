@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Auth;
 use Session;
+use Storage;
 
 class ProfileController extends Controller
 {
@@ -77,11 +78,16 @@ class ProfileController extends Controller
 
         $user = Auth::user();
 
+        // if($request->hasFile('avatar')){
+        //     $avatar = $request->avatar;
+        //     $avatar_new_name = time().$avatar->getClientOriginalName();
+        //     $avatar->move('uploads/avatar',$avatar_new_name);
+        //     $user->avatar = 'uploads/avatar/'.$avatar_new_name;
+        //     $user->save();
+        // }
         if($request->hasFile('avatar')){
-            $avatar = $request->avatar;
-            $avatar_new_name = time().$avatar->getClientOriginalName();
-            $avatar->move('uploads/avatar',$avatar_new_name);
-            $user->avatar = 'uploads/avatar/'.$avatar_new_name;
+            $path = $disk->put('avatar',$request->file('avatar'),'public');
+            $user->avatar = Storage::disk('s3')->url($path);
             $user->save();
         }
         $user->name = $request->name;
