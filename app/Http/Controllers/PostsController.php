@@ -62,18 +62,18 @@ class PostsController extends Controller
 
         // $image->move('uploads/posts',$image_new_name);
         
-        // $image = $request->image;
-        // // バケットの`myprefix`フォルダへアップロード
-        // $path = Storage::disk('s3')->putFile('myprefix', $image, 'public');
-        // // $path = Storage::disk('s3')->putFile('myprefix', $image);
-        // // アップロードした画像のフルパスを取得
-        // $url = Storage::disk('s3')->url($path);
-        $disk = Storage::disk('s3');
+        $image = $request->image;
+        // バケットの`myprefix`フォルダへアップロード
+        $path = Storage::disk('s3')->putFile('myprefix', $image, 'public');
+        // $path = Storage::disk('s3')->putFile('myprefix', $image);
+        // アップロードした画像のフルパスを取得
+        $url = Storage::disk('s3')->url($path);
+        // $disk = Storage::disk('s3');
 
-        if($request->hasfile('image')){
-            $path = $disk->put('image',$request->file('image'),'public');
-            $url = Storage::disk('s3')->url($path);
-        }
+        // if($request->hasfile('image')){
+        //     $path = $disk->put('image',$request->file('image'),'public');
+        //     $url = Storage::disk('s3')->url($path);
+        // }
 
         $user_id = Auth::id();
 
