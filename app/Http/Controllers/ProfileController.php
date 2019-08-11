@@ -75,6 +75,7 @@ class ProfileController extends Controller
             'name'=>'required',
             'email'=>'required|email'
         ]);
+        $disk = Storage::disk('s3');
 
         $user = Auth::user();
 
