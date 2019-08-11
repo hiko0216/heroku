@@ -63,8 +63,8 @@ class PostsController extends Controller
         // $image->move('uploads/posts',$image_new_name);
         $image = $request->image;
         // バケットの`myprefix`フォルダへアップロード
-        // $path = Storage::disk('s3')->putFile('myprefix', $image, 'public');
-        $path = Storage::disk('s3')->putFile('myprefix', $image);
+        $path = Storage::disk('s3')->putFile('myprefix', $image, 'public');
+        // $path = Storage::disk('s3')->putFile('myprefix', $image);
         // アップロードした画像のフルパスを取得
         $url = Storage::disk('s3')->url($path);
 
