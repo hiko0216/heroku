@@ -182,15 +182,55 @@
 		</div>
 		<div class="carousel-item ">
         <img src="{{asset('img/kitchen-1336160_1920.jpg')}}" alt="">
+        <div class="carousel-caption">
+            <h1>グローバル時代の新しい留学</h1>
+            <h2>HOME ABROAD</h2>
+    <a href="#project">
+            <button type="button" class="btn btn-outline-light btn-lg">さっそく留学先を探す</button>
+    </a>
+<a href="https://hikopro.com/homeabroad/">
+            <button type="button" class="btn btn-outline-danger btn-lg">HOME ABROADとは</button>
+    </a>
+        </div>
         </div>
         <div class="carousel-item ">
                 <img src="{{asset('img/living-room-581073_1920.jpg')}}" alt="">
+                <div class="carousel-caption">
+                    <h1>グローバル時代の新しい留学</h1>
+                    <h2>HOME ABROAD</h2>
+            <a href="#project">
+                    <button type="button" class="btn btn-outline-light btn-lg">さっそく留学先を探す</button>
+            </a>
+        <a href="https://hikopro.com/homeabroad/">
+                    <button type="button" class="btn btn-outline-danger btn-lg">HOME ABROADとは</button>
+            </a>
+                </div>
         </div>
         <div class="carousel-item ">
                 <img src="{{asset('img/neonbrand-381344-unsplash.jpg')}}" alt="">
+                <div class="carousel-caption">
+                    <h1>グローバル時代の新しい留学</h1>
+                    <h2>HOME ABROAD</h2>
+            <a href="#project">
+                    <button type="button" class="btn btn-outline-light btn-lg">さっそく留学先を探す</button>
+            </a>
+        <a href="https://hikopro.com/homeabroad/">
+                    <button type="button" class="btn btn-outline-danger btn-lg">HOME ABROADとは</button>
+            </a>
+                </div>
         </div>
         <div class="carousel-item ">
                 <img src="{{asset('img/ceiling-clean-contemporary-1457842.jpg')}}" alt="">
+                <div class="carousel-caption">
+                    <h1>グローバル時代の新しい留学</h1>
+                    <h2>HOME ABROAD</h2>
+            <a href="#project">
+                    <button type="button" class="btn btn-outline-light btn-lg">さっそく留学先を探す</button>
+            </a>
+        <a href="https://hikopro.com/homeabroad/">
+                    <button type="button" class="btn btn-outline-danger btn-lg">HOME ABROADとは</button>
+            </a>
+                </div>
         </div>
 	</div>
 </div>
