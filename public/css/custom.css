@@ -337,6 +337,9 @@ select{
       margin: 20px auto;
   }
   @media screen and (max-width: 750px) {
+    .carousel-caption button{
+        padding-bottom: 5px;
+    }
      .welcomepost{
          padding: 0 20px;
      } 
