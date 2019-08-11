@@ -138,16 +138,22 @@ class PostsController extends Controller
             'message'=>'required',
             'image' =>'nullable|image'
         ]);
+        $disk = Storage::disk('s3');
 
+        // if($request->hasFile('image')){
+        //     $image = $request->image;
+
+        //     $image_new_name = time().$image->getClientOriginalName();
+
+        //      $image->move('uploads/posts',$image_new_name);
+
+        //      $post->image = 'uploads/posts/'.$image_new_name;
+
+        // }
         if($request->hasFile('image')){
-            $image = $request->image;
-
-            $image_new_name = time().$image->getClientOriginalName();
-
-             $image->move('uploads/posts',$image_new_name);
-
-             $post->image = 'uploads/posts/'.$image_new_name;
-
+            $path = $disk->put('image',$request->file('image'),'public');
+            $post->image = Storage::disk('s3')->url($path);
+            $post->save();
         }
 
         $post->title = $request->title;
