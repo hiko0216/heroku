@@ -130,5 +130,8 @@
                 </div>
             @endif
     @yield('content')
+    <footer>
+        
+    </footer>
 </body>
 </html>
