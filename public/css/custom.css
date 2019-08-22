@@ -30,8 +30,8 @@
       top: 260px;
   }
   .main{
-    position: relative;
-    top: -140px;
+      position: absolute;
+      top: 0;
   }
   .carousel-caption h1{
     color: white;
@@ -483,36 +483,4 @@ select{
         margin: 0 8px;
     }
    }
-
-footer{
-    background: #ccc;
-}
-footer ul{
- display: flex;
- justify-content: center;
- margin-bottom: 0;
-}
-footer li{
-    list-style: none;
-    margin: 50px 30px;
-}
-footer a:hover{
- text-decoration: none;
-}
-@media screen and (max-width:750px){
- footer ul{
-     display: block;
-     margin-bottom: 0;
-    }
-    footer li{
-     list-style: none;
-     margin: 15px 5px 0;
- }
- footer{
-     padding: 10px 0;
- }
- .main{
-    position: relative;
-    top: -97px;
-  }
-}
+   

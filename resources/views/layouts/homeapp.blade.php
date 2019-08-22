@@ -131,15 +131,6 @@
                 </div>
             @endif
     @yield('content')
-    <footer>
-        <div class="footer">
-            <ul>
-                <li><a href="https://hikopro.com/homeabroad/" target="_blank">HOMEABROADについて</a></li>
-                <li><a href="https://hikopro.com/myportfolio/" target="_blank">開発者情報</a></li>
-                <li><a href="https://hikopro.com/privacy-policy/" target="_blank">プライバシーポリシー</a></li>
-                <li><a href="https://hikopro.com/contact/" target="_blank">お問い合わせ</a></li>
-            </ul>
-        </div>
-    </footer>
+    
 </body>
 </html>
